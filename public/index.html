@@ -6,39 +6,54 @@
   <link rel="stylesheet" href="output.css">
 </head>
 <body class="text-gray-600 font-body">
-
-  <div>
-    <div>
-      <nav>
-        <div>
+  <div class="grid md:grid-cols-3">
+    <div class="md:col-span-1 md:flex md:justify-end">
+      <nav class="text-right">
+        <div class="flex justify-between items-center">
           <h1 class="font-bold uppercase p-4 border-b border-gray-100">
-            <a href="/">Gusteau Recipe Ideas</a>
+            <a href="/" class="hover:text-gray-700">Gusteau Recipe Ideas</a>
           </h1>
+          <div class="px-4 cursor-pointer md:hidden" id="burger">
+            <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            
+          </div>
         </div>
-        <ul>
-          <li class="text-gray-700 font-bold">
-            <a href="#">
+        <ul class="mt-6 hidden md:block" id="menu">
+          <li class="text-gray-700 font-bold py-1">
+            <a href="#" class="px-4 flex justify-end border-r-4 border-primary">
               <span>Home</span>
+              <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+              </svg>              
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="py-1">
+            <a href="#" class="px-4 flex justify-end border-r-4 border-white">
               <span>About</span>
+              <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+              </svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="py-1">
+            <a href="#" class="px-4 flex justify-end border-r-4 border-white">
               <span>Contact</span>
+              <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              
             </a>
           </li>
         </ul>
       </nav>
     </div>
   
-    <main class="px-16 py-6 bg-gray-100">
+    <main class="px-16 py-6 bg-gray-100 md:col-span-2">
       <div class="flex justify-center md:justify-end">
-        <a href="#" class="text-primary">Log in</a>
-        <a href="#" class="text-primary ml-2">Sign up</a>
+        <a href="#" class="btn">Log in</a>
+        <a href="#" class="btn ml-2 ">Sign up</a>
       </div>
 
       <header>
@@ -48,35 +63,44 @@
       <div>
         <h4 class="font-bold pb-2 mt-12 border-b border-gray-200">Latest Recipes</h4>
   
-        <div class="mt-8">
+        <div class="mt-8 grid lg:grid-cols-3 gap-10">
           <!-- cards go here -->
-          <div class="card"> 
+          <div class="card hover:shadow-lg"> 
             <img src="img/stew.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover">
             <div class="m-4">
               <span class="font-bold">Bean Chilli Stew</span>
               <span class="block text-gray-500 text-sm">Recipe by Lewis</span>
             </div>
             <div class="badge">
+              <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg> 
               <span>25 mins</span>
             </div>
           </div>
-          <div class="card"> 
+          <div class="card hover:shadow-lg"> 
             <img src="img/noodles.jpg" alt="noodles" class="w-full h-32 sm:h-48 object-cover">
             <div class="m-4">
               <span class="font-bold">Noodles in Chicken Broth</span>
               <span class="block text-gray-500 text-sm">Recipe by Rachel</span>
             </div>
             <div class="badge">
+              <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>              
               <span>20 mins</span>
             </div>
           </div>
-          <div class="card"> 
+          <div class="card hover:shadow-lg"> 
             <img src="img/curry.jpg" alt="curry" class="w-full h-32 sm:h-48 object-cover">
             <div class="m-4">
               <span class="font-bold">Tofu Curry</span>
               <span class="block text-gray-500 text-sm">Recipe by Natasha</span>
             </div>
             <div class="badge">
+              <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg> 
               <span>1 hr</span>
             </div>
           </div>
@@ -90,10 +114,11 @@
       </div>
 
       <div class="flex justify-center">
-        <div class="bg-secondary-light text-secondary-dark p-1">Load more</div>
+        <div class="btn bg-secondary-light text-secondary-dark p-1 hover:shadow-inner hover:bg-opacity-50">Load more</div>
       </div>    
     </main>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
